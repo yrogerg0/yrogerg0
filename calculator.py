@@ -1,7 +1,16 @@
 # this program will do a mathematical operation, that is given by the user, on 2 given numbers, which is also given by the user.
-import os
 from time import sleep
-from ui import exit,clear
+import os
+def clear():
+    os.system("cls")
+
+def exit(n):
+    while n != 0:
+        clear()
+        print("The program will exit in " + str(n) + " seconds")
+        sleep(1)
+        clear()
+        n -= 1
 
 def calculator():
     # input of the first number
